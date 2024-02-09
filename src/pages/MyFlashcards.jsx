@@ -19,10 +19,10 @@ function MyFlashcards() {
     }
 
     return (
-        <div className='flex justify-center w-full p-2 mb-10'>
+        <div className='flex justify-center w-full p-2 mb-10 text-white'>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 mt-5'>
                 {flashcards.map(flashcard => (
-                    <div className='relative flex flex-col gap-2 bg-[#fefcfb] p-5 rounded-lg max-w-96' key={flashcard.id}>
+                    <div className='relative flex flex-col gap-2 bg-[#303030] p-5 rounded-lg max-w-96' key={flashcard.id}>
                         <h2 className='text-3xl mt-10 text-center'>{flashcard.title}</h2>
                         <p className='my-5 text-center'>{flashcard.desc}</p>
                         <button className='px-6 py-2 my-4 w-52 self-center border-2 border-red-500 rounded-lg'>

@@ -64,10 +64,10 @@ function FlashcardDetails() {
             </div>
 
             {/* Render terms and definitions */}
-            <div className='flex flex-col  sm:flex-row gap-5 sm:gap-0 items-center sm:justify-around'>
-                <div className='bg-[#fefcfb] p-4 min-w-60 min-h-96 rounded-xl'>
+            <div className='flex flex-col text-white  sm:flex-row gap-5 sm:gap-0 items-center sm:justify-around'>
+                <div className='bg-[#303030] p-4 min-w-60 min-h-96 rounded-xl'>
                     <h3 className='text-xl mb-2 text-center'>Flashcards</h3>
-                    <hr className='border-1 border-black mb-5' />
+                    <hr className='border-1 border-white mb-5' />
                     {flashcard.terms.map(term => (
                         <div className='flex mt-4 px-2 text-xl' key={term.id}>
                             <button onClick={() => handleTermClick(term.id)} className=''>{term.term}</button>
@@ -76,7 +76,7 @@ function FlashcardDetails() {
                 </div>
 
                 {/* term defination here */}
-                <div className='flex flex-col bg-[#fefcfb] p-4 min-w-60 sm:w-3/6 min-h-96 rounded-xl'>
+                <div className='flex flex-col bg-[#303030] p-4 min-w-60 sm:w-3/6 min-h-96 rounded-xl'>
                     {selectedTerm && (
                         <div className='flex mt-4 justify-center items-center pt-20'>
                             <button className='text-xl sm:text-5xl'>{flashcard.terms.find(term => term.id === selectedTerm).definition}</button>

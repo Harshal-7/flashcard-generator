@@ -38,17 +38,17 @@ function CreateFlashcardForm() {
 
     return (
         <div className='px-4 sm:px-52'>
-            <form className="flex flex-col max-w-full px-4 sm:px-12 py-4 sm:py-4 mx-auto bg-[#fefcfb] rounded-lg">
+            <form className="flex flex-col max-w-full px-4 sm:px-12 py-4 sm:py-4 mx-auto rounded-lg bg-[#303030]">
                 {/* Input for Group Name */}
                 <div className="mb-5 flex flex-col sm:flex-row sm:items-center">
                     <div className=' w-9/12 sm:w-6/12'>
-                        <label htmlFor="text" className="block mb-2 font-medium text-gray-900 ">Enter Group Name</label>
+                        <label htmlFor="text" className="block mb-2 font-medium text-white ">Enter Group Name</label>
                         <input
                             type="text"
                             id="text"
                             value={title}
                             onChange={e => setTitle(e.target.value)}
-                            className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="write group name" required />
+                            className="bg-[#303030] border border-gray-500 text-white rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="write group name" required />
                     </div>
                     {/* Upload Image Button */}
                     <div>
@@ -57,44 +57,44 @@ function CreateFlashcardForm() {
                 </div>
                 {/* Textarea for Group Description */}
                 <div className="mb-5">
-                    <label htmlFor="description" className="block mb-2 font-medium text-gray-900">Enter Group Description</label>
+                    <label htmlFor="description" className="block mb-2 font-medium text-white">Enter Group Description</label>
                     <textarea
                         id="description"
                         rows="2"
                         value={desc}
                         onChange={e => setDesc(e.target.value)}
-                        className="block p-2.5 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="write group description "></textarea>
+                        className="block p-2.5 w-full text-white bg-[#303030] rounded-lg border border-gray-500 focus:ring-blue-500 focus:border-blue-500" placeholder="write group description "></textarea>
                 </div>
             </form>
 
             {/* Flashcard Forms */}
             {formFields.map((field, index) => (
                 <div className='mt-2' key={field.id}>
-                    <form className="max-w-full relative px-4 sm:px-12 flex flex-col sm:flex-row gap-4 sm:gap-8 py-4 sm:py-8 mx-auto bg-[#fefcfb] rounded-lg">
+                    <form className="max-w-full relative px-4 sm:px-12 flex flex-col sm:flex-row gap-4 sm:gap-8 py-4 sm:py-8 mx-auto bg-[#303030] rounded-lg">
                         <div className='sm:mb-5 w-9 text-center text-xl bg-red-500 text-white md:w-fit px-3 py-1 sm:px-5 sm:py-2.5 rounded-full h-fit self-center'>
                             {field.id}
                         </div>
                         {/* Input for Term */}
                         <div className="sm:mb-5 sm:w-2/6">
-                            <label htmlFor="text" className="block mb-2 font-medium text-gray-900 ">
+                            <label htmlFor="text" className="block mb-2 font-medium text-white ">
                                 Enter Term
                             </label>
                             <input
                                 type="text"
                                 value={field.term}
                                 onChange={e => handleTermChange(index, e.target.value)}
-                                className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="write term" required />
+                                className="bg-[#303030] border border-gray-500 text-white rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="write term" required />
                         </div>
                         {/* Textarea for Definition */}
                         <div className="sm:mb-5 sm:w-3/6">
-                            <label htmlFor="description" className="block mb-2 font-medium text-gray-900">
+                            <label htmlFor="description" className="block mb-2 font-medium text-white">
                                 Enter Definition
                             </label>
                             <textarea
                                 rows="2"
                                 value={field.definition}
                                 onChange={e => handleDefinitionChange(index, e.target.value)}
-                                className="block p-2.5 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="write definition"></textarea>
+                                className="block p-2.5 w-full text-white bg-[#303030] rounded-lg border border-gray-500 focus:ring-blue-500 focus:border-blue-500" placeholder="write definition"></textarea>
                         </div>
                     </form>
                 </div>
