@@ -12,28 +12,25 @@ function Navbar() {
     }
 
     return (
-        <div className='px-4 sm:px-20'>
+        <div className='px-4 sm:px-56'>
             <ul className='flex gap-5'>
                 <li className='p-2 '>
                     <NavLink to="/"
                         className={({ isActive }) =>
-                            `${isActive ? "text-red-500 font-bold" : "text-black"} duration-75`
+                            `${isActive ? "text-red-500 font-bold underline underline-offset-8" : "text-white"} duration-75`
                         }
                     >
                         Create Flashcard
-
                     </NavLink>
                 </li>
                 <li className='p-2 '>
                     <NavLink to="/my-flashcards"
-                        className={({ isActive }) => ` ${isActive ? 'text-red-500 font-bold' : 'text-black'} duration-75`}
+                        className={({ isActive }) => ` ${isActive ? 'text-red-500 font-bold underline underline-offset-8' : 'text-white'} duration-75`}
                     >
                         My Flashcards
                     </NavLink>
                 </li>
             </ul>
-            <hr className="h-px my-2 border-0 bg-gray-900" />
-
         </div>
     )
 }

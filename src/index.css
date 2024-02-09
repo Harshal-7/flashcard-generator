@@ -15,5 +15,9 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  background: #fff8f4;
+  background: #303030;
+}
+
+.head {
+  font-family: "JetBrains Mono", sans-serif;
 }
