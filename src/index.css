@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+font-family: 'General Sans', sans-serif;
+font-family: 'Cabinet Grotesk', sans-serif;
+font-family: 'Chillax', sans-serif;
+font-family: 'JetBrains Mono', sans-serif;
+font-family: 'Poppins', sans-serif;
+*/
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  background: #fff8f4;
+}
