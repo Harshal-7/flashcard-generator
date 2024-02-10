@@ -13,14 +13,14 @@ function MyFlashcards() {
         return (
             <div className='text-center text-5xl mt-32 text-red-500 font-bold '>
                 No card available!
-                <p className='text-xl mt-5 text-white font-light'>go to <NavLink to='/' className='underline text-red-500'>create flashcards</NavLink> to create new flashcards</p>
+                <p className='px-4 text-xl mt-5 text-white font-light'>go to <NavLink to='/' className='underline text-red-500'>create flashcards</NavLink> to create new flashcards</p>
             </div>
         );
     }
 
     return (
-        <div className='flex justify-center w-full p-2 mb-10 text-white'>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 mt-5'>
+        <div className='flex justify-center w-full px-8 py-2 mb-10 text-white'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-20 mt-5'>
                 {flashcards.map(flashcard => (
                     <div className='relative flex flex-col gap-2 bg-[#303030] p-5 rounded-lg max-w-96' key={flashcard.id}>
                         <h2 className='text-3xl mt-10 text-center'>{flashcard.title}</h2>

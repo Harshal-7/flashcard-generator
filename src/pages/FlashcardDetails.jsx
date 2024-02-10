@@ -58,14 +58,14 @@ function FlashcardDetails() {
 
     return (
         <div className='px-4 sm:px-56'>
-            <div className='flex flex-col gap-2 mt-10 text-white'>
-                <h2 className='text-4xl font-bold'>{flashcard.title}</h2>
-                <p className='mt-2 mb-10'>{flashcard.desc}</p>
+            <div className='flex flex-col gap-2 mt-10 text-white text-center'>
+                <h2 className='text-2xl sm:text-4xl font-bold'>{flashcard.title}</h2>
+                <p className=' text-sm sm:text-base mt-2 mb-10'>{flashcard.desc}</p>
             </div>
 
             {/* Render terms and definitions */}
-            <div className='flex flex-col text-white  sm:flex-row gap-5 sm:gap-0 items-center sm:justify-around'>
-                <div className='bg-[#303030] p-4 min-w-60 min-h-96 rounded-xl'>
+            <div className='flex flex-col sm:flex-row gap-5 items-center sm:justify-around text-white'>
+                <div className='bg-[#303030] p-4 min-w-60 max-h-96 min-h-72 sm:min-h-96 rounded-xl'>
                     <h3 className='text-xl mb-2 text-center'>Flashcards</h3>
                     <hr className='border-1 border-white mb-5' />
                     {flashcard.terms.map(term => (
@@ -76,10 +76,13 @@ function FlashcardDetails() {
                 </div>
 
                 {/* term defination here */}
-                <div className='flex flex-col bg-[#303030] p-4 min-w-60 sm:w-3/6 min-h-96 rounded-xl'>
+                <div className='flex flex-col bg-[#303030] p-4 min-w-60 sm:w-3/6 min-h-72 rounded-xl'>
                     {selectedTerm && (
                         <div className='flex mt-4 justify-center items-center pt-20'>
-                            <button className='text-xl sm:text-5xl'>{flashcard.terms.find(term => term.id === selectedTerm).definition}</button>
+                            <button className='text-3xl sm:text-5xl'>
+                                {flashcard.terms.find(term => term.id === selectedTerm).definition} -
+                                {flashcard.terms.find(term => term.id === selectedTerm).img}
+                            </button>
                         </div>
                     )}
                 </div>

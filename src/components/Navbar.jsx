@@ -12,8 +12,8 @@ function Navbar() {
     }
 
     return (
-        <div className='px-4 sm:px-56'>
-            <ul className='flex gap-5'>
+        <div className='px-4 text-sm sm:text-base sm:px-56'>
+            <ul className='flex gap-2 sm:gap-5'>
                 <li className='p-2 '>
                     <NavLink to="/"
                         className={({ isActive }) =>
