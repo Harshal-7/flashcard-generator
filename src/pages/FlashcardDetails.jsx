@@ -65,7 +65,7 @@ function FlashcardDetails() {
 
             {/* Render terms and definitions */}
             <div className='flex flex-col sm:flex-row gap-5 items-center sm:justify-around text-white'>
-                <div className='bg-[#303030] p-4 min-w-60 max-h-96 min-h-72 sm:min-h-96 rounded-xl'>
+                <div className='bg-[#303030] p-4 min-w-60 max-h-96 min-h-72 sm:min-h-96 overflow-auto rounded-xl'>
                     <h3 className='text-xl mb-2 text-center'>Flashcards</h3>
                     <hr className='border-1 border-white mb-5' />
                     {flashcard.terms.map(term => (
@@ -80,8 +80,7 @@ function FlashcardDetails() {
                     {selectedTerm && (
                         <div className='flex mt-4 justify-center items-center pt-20'>
                             <button className='text-3xl sm:text-5xl'>
-                                {flashcard.terms.find(term => term.id === selectedTerm).definition} -
-                                {flashcard.terms.find(term => term.id === selectedTerm).img}
+                                {flashcard.terms.find(term => term.id === selectedTerm).definition}
                             </button>
                         </div>
                     )}
