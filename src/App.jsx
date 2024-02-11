@@ -46,8 +46,8 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
+          <Route path="" element={<Home />}></Route>
           <Route exact path="/" element={<CreateFlashcard />} />
-          <Route exact path="*" element={<CreateFlashcard />} />
           <Route path="/my-flashcards" element={<MyFlashcards />} />
           <Route path="/my-flashcards/:id" element={<FlashcardDetails />} />
         </Routes>
