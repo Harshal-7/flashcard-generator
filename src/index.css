@@ -8,16 +8,40 @@ font-family: 'Cabinet Grotesk', sans-serif;
 font-family: 'Chillax', sans-serif;
 font-family: 'JetBrains Mono', sans-serif;
 font-family: 'Poppins', sans-serif;
+font-family: 'Bespoke Stencil', sans-serif;
+font-family: 'Britney', cursive;
 */
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-  background: #1f1f1f;
+  background: #f7f3f3;
+  /* font-family: "Chillax", sans-serif; */
+  font-family: "General Sans", sans-serif;
 }
 
 .head {
-  font-family: "JetBrains Mono", sans-serif;
+  font-family: "Bespoke Stencil", sans-serif;
+}
+
+/* width */
+::-webkit-scrollbar {
+  height: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #303030;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

@@ -1,22 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import CreateFlashcard from './pages/CreateFlashcard'
-import MyFlashcards from './pages/MyFlashcards'
-import Navbar from './components/Navbar'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import CreateFlashcard from "./pages/CreateFlashcard";
+import MyFlashcards from "./pages/MyFlashcards";
+import Navbar from "./components/Navbar";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import FlashcardDetails from './pages/FlashcardDetails'
-import { Analytics } from '@vercel/analytics/react';
+import FlashcardDetails from "./pages/FlashcardDetails";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className=''>
+    <div className="">
       {/* Heading/Logo  */}
-      <h1 className='flex justify-center p-2 mt-4 mb-6'>
-        <svg className='w-3 sm:w-4' viewBox="0 0 232 412" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <h1 className="flex justify-center p-2 mt-4 mb-6">
+        {/* <svg className='w-3 sm:w-4' viewBox="0 0 232 412" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clipPath="url(#clip0_0_1)">
             <path fillRule="evenodd" clipRule="evenodd" d="M46.9887 101.468C34.8669 100.637 24.3663 109.79 23.5349 121.911L19.7031 177.78C18.8717 189.902 28.0244 200.402 40.1462 201.234L96.7327 205.115C108.854 205.946 119.355 196.794 120.186 184.672L124.018 128.803C124.849 116.681 135.35 107.529 147.472 108.36L202.623 112.143C214.745 112.974 225.245 103.821 226.077 91.6994L229.909 35.8307C230.74 23.7091 221.587 13.2082 209.466 12.3769L152.878 8.49583C140.757 7.66446 130.257 16.8174 129.425 28.939L125.593 84.8077C124.762 96.9292 114.261 106.082 102.14 105.251L46.9887 101.468Z" fill="#E40000" />
           </g>
@@ -37,12 +35,11 @@ function App() {
               <rect width="200" height="200" fill="white" transform="translate(17.0908 103.731) rotate(0.676109)" />
             </clipPath>
           </defs>
-        </svg>
+        </svg> */}
 
-        <div className='self-center text-xl sm:text-3xl ml-1 head text-white'>
-          lashcard Generator
+        <div className="self-center text-xl font-bold sm:text-4xl ml-1 head text-black">
+          <span className="text-red-500 underline">F</span>lashcard Generator
         </div>
-
       </h1>
 
       {/* Main section */}
@@ -51,14 +48,13 @@ function App() {
         <Routes>
           <Route exact path="/" element={<CreateFlashcard />} />
           <Route path="/my-flashcards" element={<MyFlashcards />} />
-          <Route path='/my-flashcards/:id' element={<FlashcardDetails />} />
+          <Route path="/my-flashcards/:id" element={<FlashcardDetails />} />
         </Routes>
       </BrowserRouter>
 
       <Analytics />
-
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
