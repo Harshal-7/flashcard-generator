@@ -24,25 +24,21 @@ function MyFlashcards() {
   }
 
   return (
-    <div className="flex justify-center w-full px-8 py-2 mb-10 text-white">
+    <div className="flex justify-center w-full px-8 py-2 mb-10 text-black">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-20 mt-20">
         {flashcards.map((flashcard) => (
           <div
-            className="relative flex flex-col gap-2 bg-[#303030] p-10 pb-5 rounded-lg max-w-96"
+            className="relative flex flex-col gap-2 bg-white p-10 pb-5 rounded-lg max-w-96  shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px]"
             key={flashcard.id}
           >
             <img
               src={flashcard.img}
               alt=""
-              className="w-20 rounded-full self-center absolute top-[-40px] transform transition-all duration-500 hover:scale-105"
+              className="w-20 h-20 object-cover rounded-full self-center absolute top-[-40px] transform transition-all duration-500 hover:scale-105"
             />
             <h2 className="text-3xl mt-10 text-center">{flashcard.title}</h2>
             <p className="my-5 text-center">{flashcard.desc}</p>
-            <button
-              className="px-6 py-2 my-4 w-52 self-center border-2 border-red-500 rounded-lg
-                                transform transition-all duration-500 hover:scale-105 hover:bg-red-500
-                        "
-            >
+            <button className="px-6 py-2 my-4 w-52 self-center border-2 border-red-500 rounded-lg transform transition-all duration-500 hover:scale-105 hover:bg-red-500">
               <NavLink to={`/my-flashcards/${flashcard.id}`} key={flashcard.id}>
                 View Details
               </NavLink>

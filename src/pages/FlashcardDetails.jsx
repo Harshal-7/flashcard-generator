@@ -71,8 +71,8 @@ function FlashcardDetails() {
       </div>
 
       {/* Render terms and definitions */}
-      <div className="flex flex-col sm:flex-row gap-5 items-center sm:justify-around text-white">
-        <div className="bg-[#303030] p-4 min-w-60 max-h-96 min-h-72 sm:min-h-96 overflow-auto rounded-xl">
+      <div className="flex flex-col sm:flex-row gap-5 items-center sm:justify-around text-black ">
+        <div className="bg-white p-4 min-w-60 max-h-96 min-h-72 sm:min-h-96 overflow-auto rounded-xl shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px]">
           <h3 className="text-xl mb-2 text-center">Flashcards</h3>
           <hr className="border-1 border-white mb-5" />
           {flashcard.terms.map((term) => (
@@ -85,7 +85,7 @@ function FlashcardDetails() {
         </div>
 
         {/* term defination here */}
-        <div className="flex flex-col bg-[#303030] p-4 min-w-60 sm:w-3/6 min-h-96 rounded-xl">
+        <div className="flex flex-col bg-white p-4 min-w-60 sm:w-3/6 min-h-96 rounded-xl shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px]">
           {selectedTerm && (
             <div className="flex flex-col gap-4 py-2 min-h-80 justify-around items-center">
               <div className="text-xl sm:text-3xl overflow-auto p-2 w-52 sm:w-full text-center">
@@ -108,21 +108,21 @@ function FlashcardDetails() {
         <div className="flex flex-col gap-4 sm:gap-10 justify-center">
           <button
             onClick={handleShare}
-            className=" sm:w-96 p-4 bg-red-500    text-white rounded-lg font-bold"
+            className=" sm:w-96 p-4 bg-red-500    text-white rounded-lg font-bold shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px]"
           >
             {" "}
             Share{" "}
           </button>
           <button
             onClick={handleDownload}
-            className=" sm:w-96 p-4 bg-red-500 text-white  rounded-lg font-bold"
+            className=" sm:w-96 p-4 bg-red-500 text-white  rounded-lg font-bold shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px]"
           >
             {" "}
             Download{" "}
           </button>
           <button
             onClick={handlePrint}
-            className=" sm:*:w-96 p-4 bg-red-500  text-white rounded-lg font-bold"
+            className=" sm:*:w-96 p-4 bg-red-500  text-white rounded-lg font-bold shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px]"
           >
             {" "}
             Print{" "}
