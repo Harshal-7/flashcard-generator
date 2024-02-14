@@ -59,7 +59,17 @@ function FlashcardDetails() {
     } else {
       // Fallback for browsers that do not support Web Share API
       // Implement your custom share dialog here
-      console.log("Web Share API not supported");
+      // console.log("Web Share API not supported");
+      const shareText = `Check out this flashcard: ${window.location.href}`;
+      if (navigator.clipboard) {
+        navigator.clipboard
+          .writeText(shareText)
+          .then(() => alert("Link copied to clipboard"))
+          .catch((error) => console.error("Copy failed:", error));
+      } else {
+        // If clipboard API is not supported, simply prompt the user to copy the link manually
+        prompt("Copy this link:", window.location.href);
+      }
     }
   };
 
@@ -105,6 +115,7 @@ function FlashcardDetails() {
           )}
         </div>
 
+        {/* share download print  */}
         <div className="flex flex-col gap-4 sm:gap-10 justify-center">
           <button
             onClick={handleShare}

@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { v4 as uuidv4 } from "uuid";
 
 const initialState = {
-  flashcards: [],
+  flashcards: JSON.parse(localStorage.getItem("flashcards")) || [],
 };
 
 const flashcardsSlice = createSlice({
@@ -23,11 +23,13 @@ const flashcardsSlice = createSlice({
       //   ],
       // };
       state.flashcards.push(action.payload);
+      localStorage.setItem("flashcards", JSON.stringify(state.flashcards));
     },
     removeFlashcard: (state, action) => {
       state.flashcards = state.flashcards.filter(
         (flashcard) => flashcard.id !== action.payload
       );
+      localStorage.setItem("flashcards", JSON.stringify(state.flashcards));
     },
   },
 });
